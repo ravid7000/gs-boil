@@ -1,6 +1,6 @@
 {
   "name": "gs-boil",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A boilerplate generator",
   "main": "bin/index",
   "keywords": [
@@ -16,7 +16,7 @@
     "start": "node bin/index"
   },
   "bin": {
-    "boil": "index.js"
+    "boil": "bin/index.js"
   },
   "dependencies": {
     "chalk": "^2.4.1",
