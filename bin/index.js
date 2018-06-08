@@ -4,7 +4,6 @@ process.title = 'boil'
 process.env.NODE_ENV = 'production'
 
 const path = require('path')
-const fs = require('fs')
 const chalk = require('chalk')
 const Steps = require('cli-step')
 const {

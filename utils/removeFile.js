@@ -1,5 +1,5 @@
-const removeSync = require('fs-extra').removeSync
+const remove = require('fs-extra').remove
 
-module.exports = async function remove(path) {
-    return await removeSync(path)
+module.exports = async function(path) {
+    return await remove(path)
 }
