@@ -11,7 +11,7 @@ npm i --global gs-boil
 ## Usage
 
 ```bash
-boil new react
+boil new <app-name> react
 ```
 
 ```bash
