@@ -14,7 +14,8 @@ const {
 const {
     underscore,
     exec,
-    removeFile
+    removeFile,
+    existFile
 } = require('../utils')
 
 process.on('unhandledRejection', (err) => {
@@ -61,6 +62,14 @@ class App {
     async init() {
         const url = this.getBluePrintUrl(this.options)
         try {
+            const exists = await existFile(path.join(process.cwd(), this.options.appName))
+            if (exists) {
+                console.log()
+                console.log()
+                console.log(' ', chalk.red('Error: Path does not empty. Try different app name.'))
+                console.log()
+                process.exit(1)
+            }
             const res = await exec(url)
             await removeFile(path.join(this.options.appName, '.git'))
             appGenerated(this.options.appName)
@@ -68,7 +77,7 @@ class App {
             debug(e.message)
             console.log()
             console.log()
-            console.log(' ', chalk.red('Failed to find requested package.'))
+            console.log(' ', chalk.red('Error: Failed to find requested package.'))
             console.log()
             process.exit(1)
         } finally {
@@ -141,7 +150,7 @@ function createOptions() {
         console.log()
         console.log(
             ' ',
-            chalk.red('Please specify a valid boilerplate name. See the link for boilerplate options:'),
+            chalk.red('Error: Please specify a valid boilerplate name. See the link for boilerplate options:'),
             chalk.blue('https://github.com/ravid7000/gs-boil/blob/master/README.md')
         )
         console.log()
