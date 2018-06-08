@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 process.title = 'boil'
-process.env.NODE_ENV = 'production'
+process.env.NODE_ENV = 'development'
 
 const path = require('path')
 const fs = require('fs')
@@ -13,7 +13,8 @@ const {
 } = require('../config')
 const {
     underscore,
-    exec
+    exec,
+    removeFile
 } = require('../utils')
 
 process.on('unhandledRejection', (err) => {
@@ -61,6 +62,7 @@ class App {
         const url = this.getBluePrintUrl(this.options)
         try {
             const res = await exec(url)
+            await removeFile(path.join(this.options.appName, '.git'))
             appGenerated(this.options.appName)
         } catch (e) {
             debug(e.message)
