@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 process.title = 'boil'
-process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = 'production'
 
 const path = require('path')
 const fs = require('fs')
