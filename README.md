@@ -5,7 +5,7 @@ A tool to bootstrap applications.
 ## Installation
 You can install the package from npm.
 ```bash
-npm i --global @adonisjs/cli
+npm i --global gs-boil
 ```
 
 ## Usage
