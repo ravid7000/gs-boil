@@ -1,0 +1,35 @@
+{
+  "name": "gs-boil",
+  "version": "0.0.1",
+  "description": "A boilerplate generator",
+  "main": "bin/index",
+  "keywords": [
+    "gs-boil",
+    "boil",
+    "cli",
+    "installer"
+  ],
+  "author": "Ravi Dhiman <ravid7000@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node bin/index"
+  },
+  "bin": {
+    "boil": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-step": "^1.0.2",
+    "es6-promisify": "^6.0.0",
+    "gradient-string": "^1.1.0",
+    "semver": "^5.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravid7000/gs-boil"
+  },
+  "bugs": {
+    "url": "https://github.com/ravid7000/gs-boil/issues"
+  }
+}
