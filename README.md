@@ -1,5 +1,7 @@
 # gs-boil
 
+![gs boil banner](https://raw.githubusercontent.com/ravid7000/gs-boil/master/banner.png)
+
 A tool to bootstrap applications.
 
 ## Installation
